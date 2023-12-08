@@ -1,0 +1,75 @@
+/* Define a keyframe animation called fadeIn */
+@keyframes fadeIn {
+  0% { opacity: 0; } /* Start with opacity 0 at the beginning of the animation */
+  100% { opacity: 1; } /* End with opacity 1 at the end of the animation */
+}
+
+/* CSS for the body of the about page */
+body {
+  font-family: 'Rubik'; /* Set the font family for the body text */
+  font-size: 22px; /* Set the font size for the body text */
+}
+
+/* CSS for the ID "Main-text" */
+.Main-Text {
+  text-align: center; /* Center the text horizontally */
+  margin: 300px auto; /* Set margin values (300px top, auto left/right, no bottom margin) */
+  max-width: 800px; /* Set a maximum width for the content */
+}
+
+.Main-Text h2 {
+  color: black; /* Set the color of h2 elements inside .Main-Text */
+  font-size: 30px; /* Set the font size for h2 elements inside .Main-Text */
+}
+
+.Main-Text p {
+  color: black; /* Set the color of p elements inside .Main-Text */
+  font-size: 16px; /* Set the font size for p elements inside .Main-Text */
+}
+
+/* Styling for underlined text with different colors */
+.highlight {
+  text-decoration: underline; /* Add underline */
+  text-decoration-color: #007BFF; /* Set the color of the underlined text */
+}
+
+.highlight2 {
+  text-decoration: underline; /* Add underline */
+  text-decoration-color: #ff0077; /* Set the color of the underlined text */
+}
+
+.highlight3 {
+  text-decoration: underline; /* Add underline */
+  text-decoration-color: #00ff95; /* Set the color of the underlined text */
+}
+
+.Certs-Container {
+  text-align: center; /* Center the content horizontally */
+  margin-top: 50px; /* Adjust the top margin as needed */
+}
+
+.Cert-Text {
+  margin-top: 0px; /* Adjust the top margin for the additional text */  
+  font-size: small;
+}
+
+/* Styling for the certificate link */
+.certificate-link {
+  text-decoration: underline; /* Add underline to the link */
+  color: #cc00ff; /* Set the color of the link text */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Styling for the container of certificate images */
+.Certs {
+  display: flex; /* Use flexbox layout */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  height: 80vh; /* Set the height of the container to the full viewport height */
+}
+
+/* Styling for certificate images with fade-in animation */
+.Certs img {
+  margin: 0 30px; /* Adjust the margin as needed for spacing */
+  animation: fadeIn 5s; /* Apply the fadeIn animation with a duration of 5 seconds */
+}
