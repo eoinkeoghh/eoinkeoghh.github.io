@@ -27,8 +27,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const currentImageSrc = document.querySelector("#darkModeToggle img").src;
 
     // Define the light and dark mode image sources
-    const lightModeImage = "imgs/darkmode.png";
-    const darkModeImage = "imgs/lightmode.png";
+    const lightModeImage = "imgs/moon_icon.png";
+    const darkModeImage = "imgs/sun_icon.png";
 
     // Determine which mode is active and switch the image source accordingly
     const newImageSrc = isDarkMode ? darkModeImage : lightModeImage;
