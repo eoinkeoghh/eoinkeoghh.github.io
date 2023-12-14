@@ -1,41 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"> <!-- Stylesheet for general styles -->
-    <link href="Navigation.css" rel="stylesheet"> <!-- Stylesheet for navigation styles -->
-    <link rel="stylesheet" href="dark-mode.css"> <!-- Stylesheet for dark mode styles -->
-    <title>Eoin Keogh</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Eoin Keogh</div>
+      <div>
+        <ul class="nav-links">    
+     
+        </ul>
+      </div>
 
-<body>
-    <!-- Navigation bar section -->
-    <div class="Navigation">
-        <b><a style="float: left; width: 100px;"> </a></b>
-        <b><a href="index.html" class="namenav float: left; font-size: 20px; text-align:center">Eoin Keogh</a></b>
-        </a>
-        <!-- Links webpages together seen in the 'Navbar' -->
-        <b><a style="float: right; width: 400px;"> </a></b>
-        <!-- Button for toggling dark mode -->
-        <button id="darkModeToggle" style="float: right; width: 100px; font-size: 11px; text-align: center; border: none; background: none; padding: 0; margin-top: 18px;">
-            <img src="imgs/moon_icon.png" width="20" height="20" style="border: none;">
-        </button>
-        <b><a href="https://github.com/eoinkeoghh?tab=repositories" style="float: right; font-size: 12px; text-align:center">GitHub</a></b>
-        <b><a href="https://www.linkedin.com/in/eoin-keogh-bb6a3a242/" style="float: right; font-size: 12px; text-align:center"> LinkedIn </a></b>
-    </div>
-
-    <!-- Main text section -->
-    <div class="Main-Text">
+      </nav>
+      
+  <nav id="hamburger-nav">
+      <div class="logo">Eoin Keogh</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+        </div>
+    </nav> 
+    <section id="profile">
+      <div class="section__text">
         Hi there! I'm <span class="highlight2">Eoin Keogh</span>, a second-year <span class="highlight">Computer Science Infrastructure</span> student at
-        <span class="highlight3">Technological University Dublin (TUD)</span>. Passionate about technology 
+        <span class="highlight3">Technological University Dublin (TUD)</span>.Passionate about technology 
         and problem-solving, I enjoy exploring the intricacies of the digital world. Welcome to my website!
-        <br><br>
-        <!-- Link to certificates page -->
-        <a href="certificates.html" class="certificate-link">Certificates</a>
+        <div class="btn-container">
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='www.linkedin.com/in/eoin-keogh-bb6a3a242'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/eoinkeoghh'"
+          />
+        </div>
+      </div>
+    </section>
+    <div class="profile">
+      <h1 class="section__text">Certificates</h1>
+      <div class="image__text">
+        <a href="https://www.credly.com/badges/fdf749b6-5827-499a-bdeb-b73640f0a561/linked_in_profile">
+          <img src="assets/CCNAIntroductiontoNetworks.png" alt="Certificate 1" width="200" height="auto">
+        </a>
+        
+        <a href="https://www.credly.com/badges/514bf07c-2b77-46ca-b58c-c4221d69265a/linked_in_profile">
+          <img src="assets/CCNASwitchingRoutingandWirelessEssentials.png" alt="Certificate 2" width="200" height="auto">
+        </a>
+        
+        <a href="https://www.credly.com/badges/8dcddc2e-b8ea-4a77-8a6e-552a3077d649/linked_in_profile">
+          <img src="assets/CyberSecurity.png" alt="Certificate 3" width="200" height="auto">
+        </a>
+        
+        <a href="https://www.credly.com/badges/d07522f0-416b-4711-a2f5-3348844aac80/linked_in_profile">
+          <img src="assets/PythonEssentials.png" alt="Certificate 4" width="200" height="auto">
+        </a>
+      </div>
     </div>
+  
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
 
-    <!-- Include JavaScript file for scripting -->
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="www.linkedin.com/in/eoin-keogh-bb6a3a242">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+ <!--
+  <footer>
+      
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+          </ul>
+        </div>
+      </nav>
+    </footer>
+    -->
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

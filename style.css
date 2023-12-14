@@ -1,47 +1,274 @@
-@media screen and (max-width: 600px) {
-  .Certs {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+/* GENERAL */
 
-  .Certs img {
-    width: 45%; /* Adjust the width of the images */
-    height: auto; /* Maintain aspect ratio */
-    margin: 10px 0; /* Adjust the margin for spacing between vertically stacked images */
-  }
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(255, 255, 255);
 }
 
-/* Define a keyframe animation called fadeIn */
-@keyframes fadeIn {
-  0% { opacity: 0; } /* Start with opacity 0 at the beginning of the animation */
-  100% { opacity: 1; } /* End with opacity 1 at the end of the animation */
-}
-
-/* CSS for the body of the about page */
 body {
-  font-family: 'Rubik'; /* Set the font family for the body text */
-  font-size: 22px; /* Set the font size for the body text */
+  font-family: 'Roboto Mono', monospace;  font-size: 18px; /* Set the font size for the body text */}
+
+html {
+  scroll-behavior: smooth;
 }
 
-/* CSS for the ID "Main-text" */
-.Main-Text {
+p {
+  color: rgb(85, 85, 85);
+}
+
+/* TRANSITION */
+
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+/* DESKTOP NAV */
+
+nav,
+.nav-links {
+  display: flex;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+}
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+a {
+  font-family: 'Roboto Mono', monospace;
+  color: black;
+  text-decoration: none;
+  text-decoration-color: white;
+}
+
+a:hover {
+  color: grey;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181, 181, 181);
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+.logo:hover {
+  cursor: default;
+}
+
+/* HAMBURGER MENU */
+
+#hamburger-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links.open {
+  max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+.hamburger-icon span:first-child {
+  opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+/* SECTIONS */
+
+section {
+  padding-top: 2vh;
+  height: 80vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+.section-container {
+  display: flex;
+}
+
+/* PROFILE SECTION */
+
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 30vh;
+}
+.section__text {
   text-align: center; /* Center the text horizontally */
-  margin: 300px auto; /* Set margin values (300px top, auto left/right, no bottom margin) */
+  margin: 100px auto; /* Set margin values (300px top, auto left/right, no bottom margin) */
   max-width: 800px; /* Set a maximum width for the content */
 }
-
-.Main-Text h2 {
-  color: black; /* Set the color of h2 elements inside .Main-Text */
-  font-size: 30px; /* Set the font size for h2 elements inside .Main-Text */
+.image__text {
+  align-self: center;
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;  font-size: 18px; /* Set the font size for the body text */
 }
 
-.Main-Text p {
-  color: black; /* Set the color of p elements inside .Main-Text */
-  font-size: 16px; /* Set the font size for p elements inside .Main-Text */
+.section__text p {
+  font-weight: 200;
 }
 
-/* Styling for underlined text with different colors */
+.section__text__p1 {
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;  font-size: 18px; /* Set the font size for the body text */
+}
+
+.title {
+  font-size: 28px;
+  text-align: center;
+}
+
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+/* ICONS */
+
+.icon {
+  cursor: pointer;
+  height: 2rem;
+}
+/*Certs */
+
+.image__text {
+  height: 40vh;
+  align-self: center;
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 18px;
+}
+/* CONTACT */
+
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 50vh;
+}
+
+.contact-info-upper-container {
+  display: flex;
+  font-family: 'Roboto Mono', monospace;  font-size: 18px; /* Set the font size for the body text */
+  justify-content: center;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  background: (250, 250, 250);
+  margin: 2rem auto;
+  padding: 0.5rem;
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+.contact-info-container p {
+  font-size: larger;
+}
+
+.contact-icon {
+  cursor: default;
+}
+
+.email-icon {
+  height: 2.5rem;
+}
+
+/* FOOTER SECTION */
+
+footer {
+  height: 20vh;
+  margin: 0 1rem;
+}
+
+footer p {
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;  font-size: 18px; /* Set the font size for the body text */
+}
+
 .highlight {
   text-decoration: underline; /* Add underline */
   text-decoration-color: #007BFF; /* Set the color of the underlined text */
@@ -55,35 +282,4 @@ body {
 .highlight3 {
   text-decoration: underline; /* Add underline */
   text-decoration-color: #00ff95; /* Set the color of the underlined text */
-}
-
-.Certs-Container {
-  text-align: center; /* Center the content horizontally */
-  margin-top: 50px; /* Adjust the top margin as needed */
-}
-
-.Cert-Text {
-  margin-top: 0px; /* Adjust the top margin for the additional text */  
-  font-size: small;
-}
-
-/* Styling for the certificate link */
-.certificate-link {
-  text-decoration: underline; /* Add underline to the link */
-  color: #cc00ff; /* Set the color of the link text */
-  cursor: pointer; /* Change cursor to pointer on hover */
-}
-
-/* Styling for the container of certificate images */
-.Certs {
-  display: flex; /* Use flexbox layout */
-  justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically */
-  height: 80vh; /* Set the height of the container to the full viewport height */
-}
-
-/* Styling for certificate images with fade-in animation */
-.Certs img {
-  margin: 0 30px; /* Adjust the margin as needed for spacing */
-  animation: fadeIn 5s; /* Apply the fadeIn animation with a duration of 5 seconds */
 }
