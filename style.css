@@ -169,6 +169,13 @@ section {
   gap: 5rem;
   height: 30vh;
 }
+
+#Certificate {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 30vh;
+}
 .section__text {
   text-align: center; /* Center the text horizontally */
   margin: 100px auto; /* Set margin values (300px top, auto left/right, no bottom margin) */
@@ -184,10 +191,6 @@ section {
   font-weight: 200;
 }
 
-.section__text__p1 {
-  text-align: center;
-  font-family: 'Roboto Mono', monospace;  font-size: 18px; /* Set the font size for the body text */
-}
 
 .title {
   font-size: 28px;
@@ -219,11 +222,17 @@ section {
 /* CONTACT */
 
 #contact {
+  gap: 30rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
   height: 50vh;
 }
+.section__text__p1 {
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;  font-size: 18px; /* Set the font size for the body text */
+}
+
 
 .contact-info-upper-container {
   display: flex;
@@ -233,15 +242,16 @@ section {
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   background: (250, 250, 250);
-  margin: 2rem auto;
+  margin: 32rem auto;
   padding: 0.5rem;
 }
 
 .contact-info-container {
+
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 1rem;
   margin: 1rem;
 }
 
